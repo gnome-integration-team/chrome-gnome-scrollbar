@@ -3,7 +3,7 @@ gem 'rubyzip'
 require 'zip/zip'
 require 'zip/zipfilesystem'
 
-zip = File.join(File.join('build', "light-themes-scrollbar.zip"))
+zip = File.join(File.join('build', "adwaita-chrome-scrollbar.zip"))
 
 task :default => :package
 
@@ -18,7 +18,8 @@ task :watch do
 end
 
 task :compile => :clear do
-	sh "compass -s compressed --force"
+	#sh "compass -s compressed --force"
+	sh "compass compile"
 end
 
 task :package => :compile do
@@ -31,6 +32,3 @@ task :package => :compile do
 		end
 	end
 end
-
-
-
