@@ -1,15 +1,14 @@
 {
-	"version": "0.3",
-	"name": "Ubuntu light-themes scrollbars",
-	"description": "Modded scrollbars that match the scrollbars used for the light-themes Radiance and Ambiance in Ubuntu 10.4",
-	"icons": {
-		"48": "images/icon48.png"
-	},
-	"content_scripts": [{
+  "version": "0.9.2",
+  "name": "Adwaita (GNOME 3) scrollbars",
+  "description": "Add GNOME 3 style scrollbars to Chrome. (Forked from Ubuntu light-themes scrollbars.)",
+  "icons": {
+    "48": "images/icon48.png"
+  },
+  "content_scripts": [{
         "matches": ["http://*/*", "https://*/*"],
         "css": ["stylesheets/scrollbar.css"],
-				"js": ["js/scrollbars.js"]
+        "js": ["js/scrollbars.js"]
         }
     ]
-
 }
