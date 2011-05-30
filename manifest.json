@@ -1,0 +1,15 @@
+{
+	"version": "0.3",
+	"name": "Ubuntu light-themes scrollbars",
+	"description": "Modded scrollbars that match the scrollbars used for the light-themes Radiance and Ambiance in Ubuntu 10.4",
+	"icons": {
+		"48": "images/icon48.png"
+	},
+	"content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "css": ["stylesheets/scrollbar.css"],
+				"js": ["js/scrollbars.js"]
+        }
+    ]
+
+}
