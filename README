@@ -1,0 +1,15 @@
+Adwaita-chrome-scrollbar
+========================
+
+To compile this Chrome extension, you need to have the following installed:
+  * Ruby
+  * Ruby Gems
+  * Rake
+  * SASS
+  * Compass
+
+Run the following:
+  mkdir -p stylesheets build
+  rake
+
+...and it will build the theme in a zip file under "build". 
