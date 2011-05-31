@@ -25,42 +25,43 @@ $btn_h_width: 16px
 .adwaita_scrollbars
   display: none
 
-::-webkit-scrollbar 
-  background: $trk
-  &:vertical
-    width: $trk_width
-  &:horizontal
-    height: $trk_height
+\:not(iframe)
+  &::-webkit-scrollbar 
+    background: $trk
+    &:vertical
+      width: $trk_width
+    &:horizontal
+      height: $trk_height
 
-::-webkit-scrollbar-button
-  &:vertical
-    height: $btn_v_height
-    &:start:decrement
-      background-image: $btn_v_dec
-      &:disabled
-        background-image: $btn_v_dec_d
-    &:end:increment
-      background-image: $btn_v_inc
-      &:disabled
-        background-image: $btn_v_inc_d
-  &:horizontal
-    width: $btn_h_width
-    &:start:decrement
-      background-image: $btn_h_dec
-      &:disabled
-        background-image: $btn_h_dec_d
-    &:end:increment
-      background-image: $btn_h_inc
-      &:disabled
-        background-image: $btn_h_inc_d
+  &::-webkit-scrollbar-button
+    &:vertical
+      height: $btn_v_height
+      &:start:decrement
+        background-image: $btn_v_dec
+        &:disabled
+          background-image: $btn_v_dec_d
+      &:end:increment
+        background-image: $btn_v_inc
+        &:disabled
+          background-image: $btn_v_inc_d
+    &:horizontal
+      width: $btn_h_width
+      &:start:decrement
+        background-image: $btn_h_dec
+        &:disabled
+          background-image: $btn_h_dec_d
+      &:end:increment
+        background-image: $btn_h_inc
+        &:disabled
+          background-image: $btn_h_inc_d
 
-::-webkit-scrollbar-thumb
-  &:vertical,
-  &:horizontal
-    border: 5px solid red
-    -webkit-border-image: $throb 5 round stretch
-    min-height: 36px
-    &:hover
-      -webkit-border-image: $throb-hover 5 round stretch
-    &:active
-      -webkit-border-image: $throb-click 5 round stretch
+  &::-webkit-scrollbar-thumb
+    &:vertical,
+    &:horizontal
+      border: 5px solid red
+      -webkit-border-image: $throb 5 round stretch
+      min-height: 36px
+      &:hover
+        -webkit-border-image: $throb-hover 5 round stretch
+      &:active
+        -webkit-border-image: $throb-click 5 round stretch
