@@ -8,61 +8,29 @@ $btn_v_inc_d: inline-image("btn_v_inc_d.png")
 $btn_h_dec_d: inline-image("btn_h_dec_d.png")
 $btn_h_inc_d: inline-image("btn_h_inc_d.png")
 
-$throb_v_back: inline-image("throb_v_back.png")
-$throb_v_hdl: inline-image("throb_v_hdl.png")
-$throb_v_border: inline-image("throb_v_border.png")
-$throb_h_back: inline-image("throb_h_back.png")
-$throb_h_hdl: inline-image("throb_h_hdl.png")
-$throb_h_border: inline-image("throb_h_border.png")
+$throb: inline-image("throb.png")
+$throb-hover: inline-image("throb-hover.png")
+$throb-click: inline-image("throb-click.png")
 
-$trk_v_back: inline-image("trk_v_back.png")
-$trk_v_bottom: inline-image("trk_v_bottom.png")
-$trk_v_top: inline-image("trk_v_top.png")
-$trk_h_back: inline-image("trk_h_back.png")
-$trk_h_left: inline-image("trk_h_left.png")
-$trk_h_right: inline-image("trk_h_right.png")
+$trk: inline-image("trk.png")
 
 // Element widths
 $trk_width: 17px
 $trk_height: $trk_width
 
-$btn_v_height: 17px
-$btn_h_width: 17px
+$btn_v_height: 16px
+$btn_h_width: 16px
 
 // Marker rule, used to identify the stylesheet from JS
 .adwaita_scrollbars
   display: none
 
 ::-webkit-scrollbar 
-  background: #f0ebe2
+  background: $trk
   &:vertical
     width: $trk_width
   &:horizontal
     height: $trk_height
-
-::-webkit-scrollbar-corner
-  background: #f0ebe2
-
-::-webkit-scrollbar-track-piece
-  &:vertical
-    background-repeat: no-repeat, repeat-y
-    width: $trk_width
-    &:start
-      background-image: $trk_v_top $trk_v_back
-      background-position: top left, 0 0
-    &:end
-      background-image: $trk_v_bottom $trk_v_back
-      background-position: bottom left, 0 0
-  &:horizontal
-    background-repeat: no-repeat, repeat-x
-    height: $trk_height
-    &:start
-      background-image: $trk_h_left $trk_h_back
-      background-position: top left, 0 0
-    &:end
-      background-image: $trk_h_right $trk_h_back
-      background-position: top right, 0 0
-
 
 ::-webkit-scrollbar-button
   &:vertical
@@ -87,13 +55,12 @@ $btn_h_width: 17px
         background-image: $btn_h_inc_d
 
 ::-webkit-scrollbar-thumb
-  &:vertical
-    -webkit-border-image: $throb_v_border 5 0 5 0 / 5px 0 5px 0 round
-    background: $throb_v_hdl left center no-repeat, $throb_v_back top left repeat-y
-    -webkit-background-clip: padding-box
-    min-height: 36px
+  &:vertical,
   &:horizontal
-    -webkit-border-image: $throb_h_border 0 5 0 5 / 0 5px 0 5px round
-    background: $throb_h_hdl center bottom no-repeat, $throb_h_back top left repeat-x
-    -webkit-background-clip: padding-box
-    min-width: 36px
+    border: 5px solid red
+    -webkit-border-image: $throb 5 round stretch
+    min-height: 36px
+    &:hover
+      -webkit-border-image: $throb-hover 5 round stretch
+    &:active
+      -webkit-border-image: $throb-click 5 round stretch
