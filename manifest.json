@@ -1,14 +1,13 @@
 {
-  "version": "1.1",
-  "name": "Adwaita (GNOME 3) scrollbars",
-  "description": "Add GNOME 3 style scrollbars to Chrome. (Forked from Ubuntu light-themes scrollbars.)",
+  "version": "1.2",
+  "name": "Adwaita (GNOME 3) scrollbars-small",
+  "description": "Add GNOME 3 style scrollbars to Chrome. (This is the small variant)",
   "icons": {
     "48": "images/icon48.png"
   },
   "content_scripts": [{
         "matches": ["http://*/*", "https://*/*"],
-        "css": ["stylesheets/scrollbar.css"],
-        "js": ["js/scrollbars.js"]
+        "css": ["stylesheets/scrollbar.css"]
         }
     ]
 }

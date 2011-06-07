@@ -23,7 +23,7 @@ task :compile => :clear do
 end
 
 task :package => :compile do
-	source_files = ["images/icon48.png", "manifest.json", "stylesheets/scrollbar.css", "js/scrollbars.js"]
+	source_files = ["images/icon48.png", "manifest.json", "stylesheets/scrollbar.css"]
 	Zip::ZipFile.open(zip, 'w') do
 		|zipfile|
 		0.upto(source_files.size-1) do |i|
