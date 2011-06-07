@@ -8,18 +8,23 @@ $btn_v_inc_d: inline-image("btn_v_inc_d.png")
 $btn_h_dec_d: inline-image("btn_h_dec_d.png")
 $btn_h_inc_d: inline-image("btn_h_inc_d.png")
 
-$throb: inline-image("throb.png")
-$throb-hover: inline-image("throb-hover.png")
-$throb-click: inline-image("throb-click.png")
+$thumb-v: inline-image("throb.png")
+$thumb-hover-v: inline-image("throb-hover.png")
+$thumb-click-v: inline-image("throb-click.png")
+$thumb-h: inline-image("throb-h.png")
+$thumb-hover-h: inline-image("throb-hover-h.png")
+$thumb-click-h: inline-image("throb-click-h.png")
 
-$trk: inline-image("trk.png")
+$trough: inline-image("trk.png")
+$trough_color: #d1d1d1
 
 // Element widths
-$trk_width: 17px
-$trk_height: $trk_width
+$trough_width: 22px
+$trough_height: $trough_width
+$trough_pad: 1px
 
-$btn_v_height: 16px
-$btn_h_width: 16px
+$btn_v_height: 20px
+$btn_h_width: 20px
 
 // Marker rule, used to identify the stylesheet from JS
 .adwaita_scrollbars
@@ -27,11 +32,11 @@ $btn_h_width: 16px
 
 \:not(iframe)
   &::-webkit-scrollbar 
-    background: $trk
+    background-color: $trough_color
     &:vertical
-      width: $trk_width
+      width: $trough_width
     &:horizontal
-      height: $trk_height
+      height: $trough_height
 
   &::-webkit-scrollbar-button
     &:vertical
@@ -59,9 +64,16 @@ $btn_h_width: 16px
     &:vertical,
     &:horizontal
       border: 5px solid red
-      -webkit-border-image: $throb 5 round stretch
       min-height: 36px
+    &:vertical
+      -webkit-border-image: $thumb-v 5 round stretch
       &:hover
-        -webkit-border-image: $throb-hover 5 round stretch
+        -webkit-border-image: $thumb-hover-v 5 round stretch
       &:active
-        -webkit-border-image: $throb-click 5 round stretch
+        -webkit-border-image: $thumb-click-v 5 round stretch
+    &:horizontal
+      -webkit-border-image: $thumb-h 5 round stretch
+      &:hover
+        -webkit-border-image: $thumb-hover-h 5 round stretch
+      &:active
+        -webkit-border-image: $thumb-click-h 5 round stretch
