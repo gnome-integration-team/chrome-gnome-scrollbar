@@ -1,7 +1,7 @@
 {
   "version": "1.2",
   "name": "Adwaita (GNOME 3) scrollbars",
-  "description": "Add GNOME 3 style scrollbars to Chrome. (Install adwaita-chrome-scrollbars-small for smaller scrollbars.)",
+  "description": "Add GNOME 3 style scrollbars to Chrome. (Installs adwaita-chrome-scrollbars-small for smaller scrollbars.)",
   "icons": {
     "48": "images/icon48.png"
   },
